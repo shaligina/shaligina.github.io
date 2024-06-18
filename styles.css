@@ -2,16 +2,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #e6d9c5;
+    color: #1e3029;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: #f4f4f4;
-    color: #333;
+    justify-content: flex-start;
 }
 
 header {
-    background-color: #333;
+    background-color: #1e3029;
     color: white;
     padding: 1rem;
     width: 100%;
@@ -21,16 +21,19 @@ header {
 header nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 header nav ul li {
-    display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 header nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
 section {
@@ -40,10 +43,6 @@ section {
     text-align: center;
 }
 
-section h2 {
-    color: #333;
-}
-
 .service {
     background: #fff;
     border: 1px solid #ddd;
@@ -51,8 +50,12 @@ section h2 {
     margin: 1rem 0;
 }
 
+.service h3 {
+    color: #e68d27;
+}
+
 footer {
-    background-color: #333;
+    background-color: #1e3029;
     color: white;
     padding: 1rem;
     text-align: center;
@@ -60,3 +63,22 @@ footer {
     position: fixed;
     bottom: 0;
 }
+
+.cta-button {
+    background-color: #e68d27;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #d47b23;
+}
+
