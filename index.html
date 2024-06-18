@@ -5,53 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bee Landscaping Bureau</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
 </head>
 <body>
     <header>
-        <h1>Bee Landscaping Bureau</h1>
-        <nav>
-            <ul>
-                <li><a href="#services">Послуги</a></li>
-                <li><a href="#contact">Контакти</a></li>
-            </ul>
-        </nav>
+        <img src="IMG_8474.JPG" alt="Фото шапки" style="width: 100%; height: auto;">
+        <div class="header-content">
+            <h1>Bee Landscaping Bureau</h1>
+            <nav>
+                <ul>
+                    <li><a href="#services">Послуги</a></li>
+                    <li><a href="#contact">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <section id="services">
         <h2>Наші послуги</h2>
-        <div class="service">
-            <h3>01</h3>
-            <img src="IMG_0970.JPG" alt="Проєктування місцевості та МАФів" style="width:100%; height:auto;">
-            <p>Проєктування місцевості та МАФів, ландшафтний дизайн</p>
+        <div class="services-carousel">
+            <div class="service">
+                <h3>Проєктування місцевості та МАФів, ландшафтний дизайн</h3>
+                <img src="IMG_0970.JPG" alt="Проєктування місцевості та МАФів">
+                <p>Опис послуги 1</p>
+            </div>
+            <div class="service">
+                <h3>Розробка проєктної, робочої документації, генеральних планів та дендропланів</h3>
+                <img src="IMG_0971.JPG" alt="Розробка проєктної, робочої документації">
+                <p>Опис послуги 2</p>
+            </div>
+            <!-- Добавьте другие слайды для других услуг -->
         </div>
-        <div class="service">
-            <h3>02</h3>
-            <img src="IMG_0971.JPG" alt="Розробка проєктної, робочої документації" style="width:100%; height:auto;">
-            <p>Розробка проєктної, робочої документації, генеральних планів та дендропланів</p>
-        </div>
-        <div class="service">
-            <h3>03</h3>
-            <img src="IMG_0972.JPG" alt="Реалізація благоустрою" style="width:100%; height:auto;">
-            <p>Реалізація благоустрою, мощення, будівництво доріг; заливка бетонних покриттів паркінгів із топінгом; виготовлення і монтаж освітлення та МАФів (дитячі майданчики, лави, перголи, басейни, фонтани і тп)</p>
-        </div>
-        <div class="service">
-            <h3>04</h3>
-            <img src="IMG_0973.JPG" alt="Реалізація озеленення" style="width:100%; height:auto;">
-            <p>Реалізація озеленення, земляні та підготовчі роботи перед висадкою, пошук і доставка рослин, монтаж систем автополиву</p>
-        </div>
-        <div class="service">
-            <h3>05</h3>
-            <img src="IMG_0974.JPG" alt="Повне обслуговування садів і територій" style="width:100%; height:auto;">
-            <p>Повне обслуговування садів і територій</p>
+
+        <div class="consultation-form">
+            <h2>Запис на консультацію</h2>
+            <form id="consultation-form">
+                <label for="name">Ім'я:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Номер телефону:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+                <button type="submit" class="cta-button" disabled>Записатись на консультацію</button>
+            </form>
         </div>
     </section>
-    <section id="contact">
-        <h2>Контакти</h2>
-        <p>Зв'язатися з нами можна по телефону: +380666498958</p>
-        <p>або в телеграмі: <a href="https://t.me/txndhr">@txndhr</a></p>
-        <button class="cta-button">Запишіться на консультацію</button>
-    </section>
+
     <footer>
         <p>&copy; 2024 Bee Landscaping Bureau. Всі права захищені.</p>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js"></script>
+    <script>
+        const servicesSlider = tns({
+            container: '.services-carousel',
+            items: 1,
+            slideBy: 'page',
+            autoplay: false,
+            controls: true,
+            nav: false,
+            responsive: {
+                640: {
+                    items: 2,
+                },
+                768: {
+                    items: 3,
+                }
+            }
+        });
+
+        document.getElementById('consultation-form').addEventListener('input', function() {
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const submitButton = document.querySelector('.cta-button');
+            
+            if (name !== '' && phone !== '') {
+                submitButton.removeAttribute('disabled');
+            } else {
+                submitButton.setAttribute('disabled', 'disabled');
+            }
+        });
+    </script>
 </body>
 </html>
