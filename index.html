@@ -64,7 +64,7 @@
                     <input type="text" id="name" name="name" required>
 
                     <label for="phone">Номер телефону:</label>
-                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+                    <input type="tel" id="phone" name="phone" placeholder="+380661234567" required>
 
                     <button type="submit" class="cta-button" disabled>Записатись на консультацію</button>
                 </form>
@@ -78,6 +78,7 @@
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/libphonenumber-js/1.9.19/libphonenumber-js.min.js"></script>
     <script>
         const servicesSlider = tns({
             container: '.services-carousel',
@@ -98,15 +99,29 @@
 
         document.getElementById('consultation-form').addEventListener('input', function() {
             const name = document.getElementById('name').value.trim();
-            const phone = document.getElementById('phone').value.trim();
+            const phoneInput = document.getElementById('phone');
+            const phone = phoneInput.value.trim();
             const submitButton = document.querySelector('.cta-button');
             
-            if (name !== '' && phone !== '') {
+            if (name !== '' && isValidPhoneNumber(phone)) {
                 submitButton.removeAttribute('disabled');
             } else {
                 submitButton.setAttribute('disabled', 'disabled');
             }
         });
+
+        function isValidPhoneNumber(phone) {
+            const phoneNumber = parsePhoneNumber(phone, 'UA');
+            return phoneNumber && phoneNumber.isValid();
+        }
+
+        function parsePhoneNumber(phone, countryCode) {
+            try {
+                return new libphonenumber.parsePhoneNumber(phone, countryCode);
+            } catch (error) {
+                return null;
+            }
+        }
     </script>
 </body>
 </html>
