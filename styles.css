@@ -1,26 +1,62 @@
-/* Добавьте стили для карусели и формы консультации */
-.header-content {
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6d9c5;
+    color: #1e3029;
+}
+
+.section {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Шапка */
+header {
+    background-color: #1e3029;
+    color: white;
+    padding: 1rem 0;
+    position: relative;
+}
+
+header .header-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white;
-    z-index: 2; /* Чтобы контент был над изображением */
+    width: 100%;
 }
 
-.header-content h1 {
+header .header-content h1 {
+    margin: 0;
     font-size: 3rem;
-    margin-bottom: 1rem;
 }
 
-header {
-    position: relative; /* Добавляем относительное позиционирование для корректного отображения контента */
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Карусель услуг */
 .services-carousel {
     margin-top: 2rem;
-    overflow: hidden; /* Добавляем скрытие для содержимого, превышающего контейнер */
+    overflow: hidden;
 }
 
 .services-carousel .service {
@@ -33,32 +69,41 @@ header {
 
 .services-carousel .service h3 {
     color: #e68d27;
+    margin-top: 0;
 }
 
-.consultation-form {
+.services-carousel .service img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+/* Форма консультации */
+.contact-form {
     margin-top: 3rem;
+    max-width: 400px;
+    margin: 0 auto;
     text-align: center;
 }
 
-.consultation-form form {
-    max-width: 400px;
-    margin: 0 auto;
+.contact-form form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.consultation-form form label {
+.contact-form form label {
     margin-bottom: 0.5rem;
 }
 
-.consultation-form form input {
+.contact-form form input {
     padding: 0.5rem;
     margin-bottom: 1rem;
     border: 1px solid #ccc;
     border-radius: 3px;
 }
 
-.consultation-form form .cta-button {
+.contact-form form .cta-button {
     background-color: #e68d27;
     color: white;
     border: none;
@@ -68,10 +113,4 @@ header {
     display: inline-block;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
-}
-
-.consultation-form form .cta-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
+    border-radius:
