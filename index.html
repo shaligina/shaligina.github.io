@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e6d9c5;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
 </head>
 <body>
     <header style="background-image: url('IMG_6079.JPG');">
@@ -16,6 +23,7 @@
             <nav>
                 <ul>
                     <li><a href="#services">Послуги</a></li>
+                    <li><a href="#prices">Тарифи</a></li>
                     <li><a href="#contact">Контакти</a></li>
                 </ul>
             </nav>
@@ -54,6 +62,53 @@
         </div>
     </section>
 
+    <section id="prices" class="section">
+        <div class="container">
+            <h2 class="section-title">Тарифи</h2>
+            <div class="price-item">
+                <h3>Стандарт</h3>
+                <ul>
+                    <li>Викошування газонів газонокосаркою</li>
+                    <li>Стрижка чагарників та живоплоту віком до 5-ти років</li>
+                    <li>Прополювання клумб</li>
+                    <li>Знищення бур’янів</li>
+                    <li>Обрізка порослі</li>
+                    <li>Прибирання</li>
+                </ul>
+                <p>4000 грн / за разовий виїзд</p>
+                <a href="#" class="cta-button">Замовити тариф</a>
+            </div>
+            <div class="price-item">
+                <h3>Преміум</h3>
+                <ul>
+                    <li>Викошування газонів газонокосаркою та тримерами</li>
+                    <li>Очищення газонів та квітників від опалого листя</li>
+                    <li>Ручний полив зі шлангу</li>
+                    <li>Стрижка чагарників та живоплоту віком до 5-ти років</li>
+                    <li>Прополювання клумб</li>
+                    <li>Знищення бур’янів</li>
+                    <li>Обрізка порослі</li>
+                </ul>
+                <p>5000 грн / за разовий виїзд</p>
+                <a href="#" class="cta-button">Замовити тариф</a>
+            </div>
+            <div class="price-item">
+                <h3>Індивідуальний</h3>
+                <ul>
+                    <li>Аерація газону</li>
+                    <li>Піскування газону</li>
+                    <li>Удобрення та обробка газону</li>
+                    <li>Внесення мульчі</li>
+                    <li>Обрізка великих дерев із вишкою</li>
+                    <li>Обрізка сухих, невеликих гілок з дерев вручну</li>
+                    <li>Спилювання дерев вручну з розпилюванням на дрова</li>
+                </ul>
+                <p>від 5000 грн / за разовий виїзд</p>
+                <a href="#" class="cta-button">Замовити тариф</a>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="section">
         <div class="container">
             <h2 class="section-title">Контакти</h2>
@@ -84,44 +139,4 @@
             container: '.services-carousel',
             items: 1,
             slideBy: 'page',
-            autoplay: false,
-            controls: true,
-            nav: false,
-            responsive: {
-                640: {
-                    items: 2,
-                },
-                768: {
-                    items: 3,
-                }
-            }
-        });
-
-        document.getElementById('consultation-form').addEventListener('input', function() {
-            const name = document.getElementById('name').value.trim();
-            const phoneInput = document.getElementById('phone');
-            const phone = phoneInput.value.trim();
-            const submitButton = document.querySelector('.cta-button');
-            
-            if (name !== '' && isValidPhoneNumber(phone)) {
-                submitButton.removeAttribute('disabled');
-            } else {
-                submitButton.setAttribute('disabled', 'disabled');
-            }
-        });
-
-        function isValidPhoneNumber(phone) {
-            const phoneNumber = parsePhoneNumber(phone, 'UA');
-            return phoneNumber && phoneNumber.isValid();
-        }
-
-        function parsePhoneNumber(phone, countryCode) {
-            try {
-                return new libphonenumber.parsePhoneNumber(phone, countryCode);
-            } catch (error) {
-                return null;
-            }
-        }
-    </script>
-</body>
-</html>
+            autoplay: false
