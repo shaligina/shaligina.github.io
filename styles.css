@@ -1,75 +1,64 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #e6d9c5;
-    color: #1e3029;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh; /* Устанавливаем минимальную высоту для полноэкранного отображения */
-    position: relative; /* Добавляем относительное позиционирование для корректного позиционирования footer */
+/* Добавьте стили для карусели и формы консультации */
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2; /* Чтобы контент был над изображением */
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
 header {
-    background-color: #1e3029;
-    color: white;
-    padding: 1rem;
-    width: 100%;
-    text-align: center;
+    position: relative; /* Добавляем относительное позиционирование для корректного отображения контента */
 }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
+.services-carousel {
+    margin-top: 2rem;
+    overflow: hidden; /* Добавляем скрытие для содержимого, превышающего контейнер */
 }
 
-header nav ul li {
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-section {
-    padding: 2rem;
-    width: 100%;
-    max-width: 800px;
-    text-align: center;
-    flex: 1; /* Занимаем все доступное пространство по вертикали */
-}
-
-.service {
+.services-carousel .service {
     background: #fff;
     border: 1px solid #ddd;
     padding: 1rem;
-    margin: 1rem 0;
+    margin: 0 10px;
+    text-align: center;
 }
 
-.service h3 {
+.services-carousel .service h3 {
     color: #e68d27;
 }
 
-footer {
-    background-color: rgba(30, 48, 41, 0.6); /* Добавляем полупрозрачный цвет фона */
-    color: white;
-    padding: 0.5rem; /* Уменьшаем отступы в футере */
+.consultation-form {
+    margin-top: 3rem;
     text-align: center;
-    width: 100%;
-    position: absolute; /* Переходим к абсолютному позиционированию */
-    bottom: 0;
-    left: 0;
-    right: 0;
 }
 
-.cta-button {
+.consultation-form form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.consultation-form form label {
+    margin-bottom: 0.5rem;
+}
+
+.consultation-form form input {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.consultation-form form .cta-button {
     background-color: #e68d27;
     color: white;
     border: none;
@@ -78,13 +67,11 @@ footer {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 20px 0; /* Увеличиваем отступ между кнопкой и футером */
     cursor: pointer;
     border-radius: 5px;
-    position: relative; /* Добавляем относительное позиционирование для корректного отображения текста */
-    z-index: 1; /* Устанавливаем z-index, чтобы кнопка была над текстом футера */
 }
 
-.cta-button:hover {
-    background-color: #d47b23;
+.consultation-form form .cta-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
