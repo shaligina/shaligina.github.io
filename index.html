@@ -3,110 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bee Landscaping Bureau</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Ландшафтне бюро</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header style="background-image: url('IMG_6079.JPG');">
-        <div class="header-overlay"></div>
-        <div class="header-content">
-            <h1>Bee Landscaping Bureau</h1>
-            <nav>
+    <div class="container">
+        <h1>Ландшафтне бюро</h1>
+        
+        <div class="services">
+            <h2>Наші послуги</h2>
+            <ul>
+                <li>Проєктування місцевості та МАФів, ландшафтний дизайн</li>
+                <li>Розробка проєктної, робочої документації, генеральних планів та дендропланів</li>
+                <li>Реалізація благоустрою, мощення, будівництво доріг</li>
+                <li>Реалізація озеленення, земляні та підготовчі роботи перед висадкою</li>
+                <li>Повне обслуговування садів і територій</li>
+                <li>Аудит Вашого благоустрою</li>
+            </ul>
+        </div>
+
+        <div class="tariffs">
+            <h2>Тарифи на обслуговування садів</h2>
+            <div class="tariff">
+                <h3>Стандарт</h3>
                 <ul>
-                    <li><a href="#services">Послуги</a></li>
-                    <li><a href="#contact">Контакти</a></li>
+                    <li>Викошування газонів газонокосаркою</li>
+                    <li>Стрижка чагарників та живоплоту віком до 5-ти років</li>
+                    <li>Прополювання клумб</li>
+                    <li>Знищення бур’янів</li>
+                    <li>Обрізка порослі</li>
+                    <li>Прибирання</li>
                 </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section id="services" class="section">
-        <div class="container">
-            <h2 class="section-title">Наші послуги</h2>
-            <div class="services-carousel">
-                <div class="service">
-                    <img src="IMG_0970.JPG" alt="Проєктування місцевості та МАФів">
-                    <h3>Проєктування місцевості та МАФів</h3>
-                </div>
-                <div class="service">
-                    <img src="IMG_0971.JPG" alt="Розробка проєктної, робочої документації">
-                    <h3>Розробка проєктної, робочої документації</h3>
-                </div>
-                <div class="service">
-                    <img src="IMG_0972.JPG" alt="Реалізація благоустрою, мощення, будівництво доріг">
-                    <h3>Реалізація благоустрою, мощення, будівництво доріг</h3>
-                </div>
-                <div class="service">
-                    <img src="IMG_0973.JPG" alt="Реалізація озеленення, земляні та підготовчі роботи">
-                    <h3>Реалізація озеленення, земляні та підготовчі роботи</h3>
-                </div>
-                <div class="service">
-                    <img src="IMG_0974.JPG" alt="Повне обслуговування садів і територій">
-                    <h3>Повне обслуговування садів і територій</h3>
-                </div>
-                <div class="service">
-                    <img src="IMG_0970.JPG" alt="Аудит Вашого благоустрою">
-                    <h3>Аудит Вашого благоустрою</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Контакти</h2>
-            <div class="contact-form">
-                <h3>Запис на консультацію</h3>
-                <form id="consultation-form">
-                    <label for="name">Ім'я:</label>
-                    <input type="text" id="name" name="name" required>
-
-                    <label for="phone">Номер телефону:</label>
-                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
-
-                    <button type="submit" class="cta-button" disabled>Записатись на консультацію</button>
-                </form>
+                <p>4000 грн / за разовий виїзд</p>
+                <a href="#" class="btn">Замовити тариф</a>
             </div>
 
-            <div class="contact-info">
-                <p>Телефон: <a href="tel:+380666498958">+380666498958</a></p>
-                <p>Телеграм: <a href="https://t.me/txndhr">@txndhr</a></p>
+            <div class="tariff">
+                <h3>Преміум</h3>
+                <ul>
+                    <li>Викошування газонів газонокосаркою та тримерами</li>
+                    <li>Очищення газонів та квітників від опалого листя</li>
+                    <li>Ручний полив зі шлангу</li>
+                    <li>Стрижка чагарників та живоплоту віком до 5-ти років</li>
+                    <li>Прополювання клумб</li>
+                    <li>Знищення бур’янів</li>
+                    <li>Обрізка порослі</li>
+                </ul>
+                <p>5000 грн / за разовий виїзд</p>
+                <a href="#" class="btn">Замовити тариф</a>
+            </div>
+
+            <div class="tariff">
+                <h3>Індивідуальний</h3>
+                <ul>
+                    <li>Аерація газону</li>
+                    <li>Піскування газону</li>
+                    <li>Удобрення та обробка газону</li>
+                    <li>Внесення мульчі</li>
+                    <li>Обрізка великих дерев із вишкою</li>
+                    <li>Обрізка сухих, невеликих гілок з дерев вручну</li>
+                    <li>Спилювання дерев вручну з розпилюванням на дрова</li>
+                </ul>
+                <p>від 5000 грн / за разовий виїзд</p>
+                <a href="#" class="btn">Замовити тариф</a>
             </div>
         </div>
-    </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js"></script>
-    <script>
-        const servicesSlider = tns({
-            container: '.services-carousel',
-            items: 1,
-            slideBy: 'page',
-            autoplay: false,
-            controls: true,
-            nav: false,
-            responsive: {
-                640: {
-                    items: 2,
-                },
-                768: {
-                    items: 3,
-                }
-            }
-        });
+        <div class="contact">
+            <h2>Наші контакти</h2>
+            <p>Телефон: <a href="tel:+380666498958">+380666498958</a></p>
+            <p>Телеграм: <a href="https://t.me/txndhr">@txndhr</a></p>
+        </div>
 
-        document.getElementById('consultation-form').addEventListener('input', function() {
-            const name = document.getElementById('name').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const submitButton = document.querySelector('.cta-button');
-            
-            if (name !== '' && phone !== '') {
-                submitButton.removeAttribute('disabled');
-            } else {
-                submitButton.setAttribute('disabled', 'disabled');
-            }
-        });
-    </script>
+        <div class="form-container">
+            <h2>Записатись на консультацію</h2>
+            <form id="consultation-form">
+                <input type="text" id="name" name="name" placeholder="Ваше ім'я" required><br>
+                <input type="text" id="phone" name="phone" placeholder="Номер телефону" required><br>
+                <input type="submit" value="Записатись на консультацію">
+            </form>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
