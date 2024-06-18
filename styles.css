@@ -1,14 +1,15 @@
-/* Общие стили */
-body {
-    font-family: 'Montserrat', sans-serif;
+/* Reset и общие стили */
+* {
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
-    color: #1e3029;
+    box-sizing: border-box;
 }
 
-.section {
-    padding: 50px 0;
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f2f2f2;
+    color: #1e3029;
+    line-height: 1.6;
 }
 
 .container {
@@ -17,7 +18,11 @@ body {
     padding: 0 20px;
 }
 
-/* Стили для шапки */
+.section {
+    padding: 50px 0;
+}
+
+/* Шапка */
 header {
     height: 400px;
     background-size: cover;
@@ -71,7 +76,7 @@ header nav ul li a:hover {
     color: #e68d27;
 }
 
-/* Стили для карусели услуг */
+/* Карусель услуг */
 .services-carousel {
     display: flex;
     flex-wrap: wrap;
@@ -79,9 +84,9 @@ header nav ul li a:hover {
 }
 
 .service {
+    width: calc(33.33% - 40px);
     margin: 20px;
     text-align: center;
-    max-width: 300px;
     border: 1px solid #e6d9c5;
     padding: 20px;
     border-radius: 10px;
@@ -106,14 +111,15 @@ header nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-/* Стили для формы консультации */
+/* Форма консультации и контактная информация */
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
+    padding-bottom: 50px;
 }
 
-.contact-form h2 {
+.contact-form h3 {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 20px;
@@ -121,19 +127,4 @@ header nav ul li a:hover {
 
 .contact-form form {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact-form label {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="tel"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px
+    flex-direction: column
