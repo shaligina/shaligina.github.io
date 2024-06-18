@@ -3,7 +3,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: #e6d9c5; /* Фоновий колір сторінки */
     color: #1e3029;
 }
 
@@ -68,10 +68,10 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #e68d27;
+    color: #e68d27; /* Колір посилання при наведенні */
 }
 
-/* Стили для карусели услуг */
+/* Стили для каруселі послуг */
 .services-carousel {
     display: flex;
     flex-wrap: wrap;
@@ -106,7 +106,7 @@ header nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-/* Стили для формы консультации */
+/* Стили для форми консультації */
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -136,4 +136,37 @@ header nav ul li a:hover {
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 12px 20px;
+    background-color: #e68d27; /* Колір кнопки */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #d97706; /* Колір кнопки при наведенні */
+}
+
+.contact-info {
+    margin-top: 30px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+}
+
+.contact-info a {
+    color: #1e3029; /* Колір посилань контактної інформації */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #e68d27; /* Колір посилань контактної інформації при наведенні */
+}
