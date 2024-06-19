@@ -12,11 +12,159 @@
             background-color: #e6d9c5;
             margin: 0;
             font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-image: url('IMG_6079.JPG');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            color: white;
+        }
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .services-carousel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            margin-top: 20px;
+        }
+        .service {
+            text-align: center;
+        }
+        .service img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .service h3 {
+            font-size: 18px;
+        }
+        .price-item {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .price-item h3 {
+            font-size: 22px;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .price-item ul {
+            padding: 0;
+            margin: 10px 0;
+        }
+        .price-item ul li {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .price-item p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+        .contact-form {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .contact-form h3 {
+            margin-top: 0;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .contact-form button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-form button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .contact-info {
+            margin-top: 20px;
+        }
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+        .contact-info a {
+            color: #4CAF50;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-    <header style="background-image: url('IMG_6079.JPG');">
+    <header>
         <div class="header-overlay"></div>
         <div class="header-content">
             <h1>Bee Landscaping Bureau</h1>
@@ -72,7 +220,7 @@
                     <li>Стрижка чагарників та живоплоту віком до 5-ти років</li>
                     <li>Прополювання клумб</li>
                     <li>Знищення бур’янів</li>
-                    <li>Обрізка порослі</li>
+                    <li>Об                    <li>Обрізка порослі</li>
                     <li>Прибирання</li>
                 </ul>
                 <p>4000 грн / за разовий виїзд</p>
@@ -121,7 +269,7 @@
                     <label for="phone">Номер телефону:</label>
                     <input type="tel" id="phone" name="phone" placeholder="+380661234567" required>
 
-                    <button type="submit" class="cta-button" disabled>Записатись на консультацію</button>
+                    <button type="submit" class="cta-button">Записатись на консультацію</button>
                 </form>
             </div>
 
@@ -140,3 +288,8 @@
             items: 1,
             slideBy: 'page',
             autoplay: false
+        });
+    </script>
+</body>
+</html>
+
