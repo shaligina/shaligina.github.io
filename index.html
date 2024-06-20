@@ -7,245 +7,15 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Общие стили */
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #e6d9c5;
-            color: #1e3029;
-        }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section {
-            padding: 50px 0;
-        }
-
-        /* Стили для шапки */
-        header {
-            height: 400px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #ffffff;
-        }
-
-        .header-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .header-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        header nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        header nav ul li {
-            display: inline-block;
-            margin-right: 20px;
-        }
-
-        header nav ul li a {
-            text-decoration: none;
-            color: #ffffff;
-            font-size: 1.2rem;
-            transition: color 0.3s ease;
-        }
-
-        header nav ul li a:hover {
-            color: #e68d27;
-        }
-
-        /* Стили для карусели услуг */
-        .services-carousel {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .service {
-            width: calc(33.33% - 40px);
-            margin: 20px;
-            text-align: center;
-            border: 1px solid #e6d9c5;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .service:hover {
-            transform: translateY(-5px);
-        }
-
-        .service img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
-
-        .service h3 {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        /* Стили для формы консультации */
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-            padding-bottom: 50px;
-        }
-
-        .contact-form h3 {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .contact-form form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .contact-form label {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .contact-form input[type="text"],
-        .contact-form input[type="tel"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-            box-sizing: border-box;
-        }
-
-        .cta-button {
-            padding: 12px 20px;
-            background-color: #e68d27;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #b36900;
-        }
-
-        /* Стилі для розділу тарифів */
-        #prices {
-            background-color: #ffffff;
-            padding: 50px 0;
-        }
-
-        .price-card {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-            padding: 20px;
-            border: 1px solid #e6d9c5;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-
-        .price-card h3 {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .price-list {
-            text-align: left;
-            margin-bottom: 20px;
-        }
-
-        .price-list ul {
-            padding: 0;
-            margin: 0;
-            list-style-position: inside;
-        }
-
-        .price-list ul li {
-            margin-bottom: 10px;
-        }
-
-        .price-card .cta-button {
-            background-color: #e68d27;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .price-card .cta-button:hover {
-            background-color: #b36900;
-        }
-
-        /* Стилі для секції контактів */
-        #contact {
-            background-color: #e6d9c5;
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        .contact-info {
-            margin-top: 20px;
-        }
-
-        .contact-info p {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .contact-info a {
-            color: #1e3029;
-            font-weight: bold;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .contact-info a:hover {
-            color: #e68d27;
-        }
-    </style>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-38DX1CMHSH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-38DX1CMHSH');
+    </script>
 </head>
 <body>
     <header style="background-image: url('IMG_6079.JPG');">
@@ -255,7 +25,7 @@
             <nav>
                 <ul>
                     <li><a href="#services">Послуги</a></li>
-                    <li><a href="#prices">Тарифи</a></li>
+                    <li><a href="#tariffs">Тарифи</a></li>
                     <li><a href="#contact">Контакти</a></li>
                 </ul>
             </nav>
@@ -280,7 +50,7 @@
                 </div>
                 <div class="service">
                     <img src="IMG_0973.JPG" alt="Реалізація озеленення, земляні та підготовчі роботи">
-                    <h3>Реалізація озелененення, земляні та підготовчі роботи</h3>
+                    <h3>Реалізація озеленення, земляні та підготовчі роботи</h3>
                 </div>
                 <div class="service">
                     <img src="IMG_0974.JPG" alt="Повне обслуговування садів і територій">
@@ -294,58 +64,49 @@
         </div>
     </section>
 
-    <section id="prices" class="section">
+    <section id="tariffs" class="section">
         <div class="container">
             <h2 class="section-title">Тарифи</h2>
-
-            <div class="price-card">
+            <div class="tariff">
                 <h3>Стандарт</h3>
-                <div class="price-list">
-                    <ul>
-                        <li>Викошування газонів газонокосаркою</li>
-                        <li>Стрижка чагарників та живоплоту віком до 5-ти років</li>
-                        <li>Прополювання клумб</li>
-                        <li>Знищення бур’янів</li>
-                        <li>Обрізка порослі</li>
-                        <li>Прибирання</li>
-                    </ul>
-                </div>
+                <ul>
+                    <li>Викошування газонів газонокосаркою</li>
+                    <li>Стрижка чагарників та живоплоту віком до 5-ти років</li>
+                    <li>Прополювання клумб</li>
+                    <li>Знищення бур’янів</li>
+                    <li>Обрізка порослі</li>
+                    <li>Прибирання</li>
+                </ul>
                 <p>4000 грн / за разовий виїзд</p>
-                <a href="#consultation-form" class="cta-button">Замовити тариф</a>
+                <button onclick="document.getElementById('contact').scrollIntoView();">Замовити тариф</button>
             </div>
-
-            <div class="price-card">
+            <div class="tariff">
                 <h3>Преміум</h3>
-                <div class="price-list">
-                    <ul>
-                        <li>Викошування газонів газонокосаркою та тримерами</li>
-                        <li>Очищення газонів та квітників від опалого листя</li>
-                        <li>Ручний полив зі шлангу</li>
-                        <li>Стрижка чагарників та живоплоту віком до 5-ти років</li>
-                        <li>Прополювання клумб</li>
-                        <li>Знищення бур’янів</li>
-                        <li>Обрізка порослі</li>
-                    </ul>
-                </div>
+                <ul>
+                    <li>Викошування газонів газонокосаркою та тримерами</li>
+                    <li>Очищення газонів та квітників від опалого листя</li>
+                    <li>Ручний полив зі шлангу</li>
+                    <li>Стрижка чагарників та живоплоту віком до 5-ти років</li>
+                    <li>Прополювання клумб</li>
+                    <li>Знищення бур’янів</li>
+                    <li>Обрізка порослі</li>
+                </ul>
                 <p>5000 грн / за разовий виїзд</p>
-                <a href="#consultation-form" class="cta-button">Замовити тариф</a>
+                <button onclick="document.getElementById('contact').scrollIntoView();">Замовити тариф</button>
             </div>
-
-            <div class="price-card">
+            <div class="tariff">
                 <h3>Індивідуальний</h3>
-                <div class="price-list">
-                    <ul>
-                        <li>Аерація газону</li>
-                        <li>Піскування газону</li>
-                        <li>Удобрення та обробка газону</li>
-                        <li>Внесення мульчі</li>
-                        <li>Обрізка великих дерев із вишкою</li>
-                        <li>Обрізка сухих, невеликих гілок з дерев вручну</li>
-                        <li>Спилювання дерев вручну з розпилюванням на дрова</li>
-                    </ul>
-                </div>
+                <ul>
+                    <li>Аерація газону</li>
+                    <li>Піскування газону</li>
+                    <li>Удобрення та обробка газону</li>
+                    <li>Внесення мульчі</li>
+                    <li>Обрізка великих дерев із вишкою</li>
+                    <li>Обрізка сухих, невеликих гілок з дерев вручну</li>
+                    <li>Спилювання дерев вручну з розпилюванням на дрова</li>
+                </ul>
                 <p>від 5000 грн / за разовий виїзд</p>
-                <a href="#consultation-form" class="cta-button">Замовити тариф</a>
+                <button onclick="document.getElementById('contact').scrollIntoView();">Замовити тариф</button>
             </div>
         </div>
     </section>
@@ -406,4 +167,3 @@
     </script>
 </body>
 </html>
-
