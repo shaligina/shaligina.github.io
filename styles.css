@@ -3,7 +3,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e6d9c5; /* Фоновий колір сторінки */
+    background-color: #e6d9c5;
     color: #1e3029;
 }
 
@@ -68,10 +68,10 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #e68d27; /* Колір посилання при наведенні */
+    color: #e68d27;
 }
 
-/* Стили для каруселі послуг */
+/* Стили для карусели услуг */
 .services-carousel {
     display: flex;
     flex-wrap: wrap;
@@ -106,7 +106,7 @@ header nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-/* Стили для форми консультації */
+/* Стили для формы консультации */
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -139,9 +139,9 @@ header nav ul li a:hover {
     border-radius: 5px;
 }
 
-.contact-form button {
-    padding: 12px 20px;
-    background-color: #e68d27; /* Колір кнопки */
+.cta-button {
+    padding: 10px 20px;
+    background-color: #1e3029;
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -149,12 +149,13 @@ header nav ul li a:hover {
     transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
-    background-color: #d97706; /* Колір кнопки при наведенні */
+.cta-button:hover {
+    background-color: #e68d27;
 }
 
 .contact-info {
-    margin-top: 30px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .contact-info p {
@@ -162,11 +163,90 @@ header nav ul li a:hover {
 }
 
 .contact-info a {
-    color: #1e3029; /* Колір посилань контактної інформації */
+    color: #1e3029;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
 .contact-info a:hover {
-    color: #e68d27; /* Колір посилань контактної інформації при наведенні */
+    text-decoration: underline;
+}
+
+/* Стили для тарифов */
+.tariff {
+    border: 1px solid #1e3029;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tariff h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.tariff ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+    text-align: left;
+}
+
+.tariff ul li {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.tariff p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.tariff button {
+    padding: 10px 20px;
+    background-color: #1e3029;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tariff button:hover {
+    background-color: #e68d27;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .service {
+        width: calc(50% - 40px);
+    }
+
+    .tariff {
+        width: calc(100% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .service {
+        width: calc(100% - 40px);
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .tariff h3 {
+        font-size: 1.5rem;
+    }
+
+    .tariff p {
+        font-size: 1.2rem;
+    }
 }
